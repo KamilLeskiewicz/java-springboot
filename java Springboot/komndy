@@ -1,0 +1,12 @@
+curl http://localhost:8080/api/tasks
+curl -d "name=Pierwsze zadanie" http://localhost:8080/api/tasks
+curl -d "name=Drugie zadanie" http://localhost:8080/api/tasks
+curl http://localhost:8080/api/tasks
+curl -X PUT -d "status=IN_PROGRESS" http://localhost:8080/api/tasks/1/status
+curl -X PUT -d "status=DONE" http://localhost:8080/api/tasks/2/status
+curl http://localhost:8080/api/tasks
+
+
+bledy:
+curl -i -d "" http://localhost:8080/api/tasks
+curl -i -X PUT -d "status=UNKNOWN" http://localhost:8080/api/tasks/1/status
